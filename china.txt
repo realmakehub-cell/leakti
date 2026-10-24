@@ -12,7 +12,7 @@ local SAVE_FILE_NAME = "ChilliHubV5_KeyData.json"
 -- Hàm tự động chạy script chính
 local function loadMainScript()
 	local success, err = pcall(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ronnei/hihi/refs/heads/main/chillihubv5.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/realmakehub-cell/leakti/refs/heads/main/main.lua"))()
 	end)
 	if not success then
 		warn("Failed to load script: " .. tostring(err))

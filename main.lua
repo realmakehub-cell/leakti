@@ -1,9 +1,9 @@
 -- DogMeoHub V5 | Arceus X NEO Fixed + Zero-Lag Compact Edition | Manual Apply Mode
 local NEW_TITLE, LOGO_ID = "DogMeoHub V5", "rbxassetid://96209229699816"
 local LOGO_BG, BLACK_BG = Color3.fromRGB(5, 7, 15), Color3.fromRGB(0, 0, 0)
--- Lưu ý: Bạn có thể cần đổi tên file trên GitHub của bạn thành dogmeohubv5.lua nếu chưa đổi
 local MY_URL = "https://raw.githubusercontent.com/ronnei/hihi/refs/heads/main/dogmeohubv5.lua"
-local VENYX_URL = "https://raw.githubusercontent.com/tienkhanh1/Venyx/main/VenyxHub"
+-- Lưu ý: Giữ nguyên link gốc VenyxHub để không làm lỗi script, chỉ đổi tên biến
+local DOGMEOHUB_URL = "https://raw.githubusercontent.com/tienkhanh1/Venyx/main/VenyxHub"
 local AUTO_FILE, LANG_FILE = "DogMeoHubV5_AutoRun.lua", "DogMeoV5_Lang.txt"
 local PRESET_JSON = [=[{"venyx":1,"name":"hihi 2","data":{"System / Interface/Quick bars/Show quick bars":true,"Farm / Sell/Favorite/Auto favorite":false,"System / Interface/Quick bars/Quick bar layout":"{\"pins\":{\"Event / Butterfly/Butterfly bloom/Auto butterfly bloom\":2,\"Player / Combat/Hit aura/Hit aura\":1,\"Player / Combat/Auto hit/Chase speed\":1,\"Steal / Auto Steal/Auto hop server/Auto hop\":1,\"Player / Move/Movement/Boost speed\":1,\"Player / Combat/Auto hit/Auto hit\":1,\"Steal / Auto Steal/Auto steal/Auto steal\":1,\"Event / Race/Racing Event/Auto race\":2,\"Farm / Treadmill/Treadmill/Auto treadmill\":1,\"Player / Move/Movement/Speed boost\":1},\"keys\":[],\"at\":{\"1\":[766.9053955078125,21.74544906616211],\"2\":[624.3492431640625,21.080074310302736]},\"fold\":{\"1\":true,\"2\":true}}","System / Optimizer/Graphics/Disable 3D Render":false,"Farm / Pen/Auto place/Place first":"Best value","Steal / Auto Steal/Filter/Only below /s":0,"Farm / Pen/Auto hatch/Equip best pets":false,"Event / AA/Capture the egg/Auto capture event egg":true,"Farm / Mutate/Mutate filter/Only these eggs":[],"Farm / Treadmill/Treadmill/Auto upgrade treadmill":false,"Steal / Auto Steal/Auto steal/Drop eggs at safe zone":false,"Steal / Auto Steal/Auto hop server/Auto hop":false,"System / Interface/Interface/Dim the game":0,"Player / Combat/Hit aura/Skip friends":true,"Player / ESP/Others/Pen egg ESP":true,"System / Optimizer/Frame rate/FPS position":"0.5000,-550,0.0000,49","Event / Butterfly/Butterfly bloom/Auto butterfly bloom":true,"Farm / Pen/Auto hatch/Rarities":["Divine","Eternal","Secret","Cosmic","Mythic","Legendary","Epic","Rare","Uncommon","Common"],"Steal / Auto Steal/Filter/Min value /s":2000000000,"Player / Combat/Hit aura/Hit aura":true,"Event / Star/Shooting Star/Auto catch shooting star":true,"Steal / Egg Predictor/Egg showcase/Calculate mutations":[],"Steal / Egg Predictor/Egg showcase/Sort eggs":"Value","Event / Halloween/Ghost Dog and fishing/Auto fishing":true,"System / Optimizer/Bases/Hide other players' pets and eggs":true,"Player / Combat/Auto hit/Auto hit":false,"Event / Halloween/Ghost Dog and fishing/Auto Ghost Dog quest":false,"Event / Butterfly/Butterfly bloom/Catch mode":"Chase","Event / Butterfly/Butterfly machine/Trade":[],"Event / Halloween/Halloween Dimension/Halloween eggs":["Bone Emperor","Voidseer Pumpkin","Zombified Bone Emperor","Ghost Reaper","Gorillastein","Phantom Dragon","Shelltide Voyager","Zombified Bone Emperor","Zombified Phantom Dragon","BloodBloom","Grave Cerberus","Graveyard Brute","Werewolf","Zombified Night Fang","Zombified Pumpkin Fiend","Zombified Tombstone Bear"],"Farm / Pen/Auto place/Auto place":false,"Steal / Auto Steal/Filter/Rarities":["Divine","Eternal","Secret"],"System / Webhook/What to post/Post fused eggs":false,"Event / Halloween/Halloween Dimension/Auto Pumpkin Moon":true,"Farm / Sell/Pets/Sell rarities":["Rare","Uncommon","Common"],"Player / Move/Protection/Ignore traps":true,"Farm / Fuse/Fuse filter/Rarities":["Mythic","Legendary","Epic","Rare","Uncommon","Common"],"System / Webhook/Discord webhook/Ping role ID":"","Player / ESP/Others/Hide sleeping guards":true,"Event / Halloween/Halloween Dimension/Min value /s":1000000000,"System / Optimizer/Frame rate/Show FPS and ping":true,"Farm / Treadmill/Progress/Auto claim index rewards":false,"System / Interface/Quick bars/Keybinds":true,"Steal / Auto Steal/Auto steal/Instant steps":2,"Farm / Fuse/Fuse filter/Never fuse":[],"Farm / Pen/Auto hatch/Mutations":[],"System / Optimizer/Bases/Hide my pets and eggs":true,"Event / Halloween/Monsters/Monster order":"Most tokens","Steal / Auto Steal/Filter/Zones":["Enchanted Forest","Light Dark","Titan Temple","Cherry Blossom"],"Event / Butterfly/Butterfly machine/Auto craft essence":true,"Farm / Mutate/Auto mutate/Auto mutate":false,"Player / ESP/Others/Other pens ESP":true,"Player / ESP/Field eggs/Egg ESP":false,"Farm / Pen/Keep eggs/Min value /s":0,"Steal / Auto Steal/Auto steal/Delivery method":"Instant steps","Farm / Treadmill/Progress/Auto buy trails":false,"Farm / Sell/Eggs/Sell rarities":["Rare","Uncommon","Common"],"System / Interface/Interface/Tone":100,"Event / AA/Admin abuse/Admin treadmill":false,"System / Webhook/What to post/Rarities":["Divine","Eternal","Secret","Cosmic","Mythic","Legendary","Epic","Rare","Uncommon","Common"],"Farm / Pen/Auto place/Place when":"Always","Event / Halloween/Monsters/Monsters":["Candy Corn","Hollow Bat","Scarecrow","Chest Mimic","Pumpkin Golem","Soul Phantom"],"Event / Butterfly/Wisp companion/Auto banjo cricket":false,"Event / Halloween/Halloween Dimension/Auto buy Halloween Dimension Egg":false,"Event / Halloween/Halloween Dimension/Walk speed":1000,"Steal / Auto Steal/Auto steal/Delivery speed":4500,"Farm / Mutate/Auto mutate/Use items":["Fractured","Scrambled","Enchanted","Nitro","Spectral"],"Farm / Fuse/Fuse machine/Fuse first":"Lowest rarity","Steal / Auto Steal/Auto hop server/Rare from":"Cosmic","Player / Move/Movement/Boost speed":720,"System / Interface/Interface/Opacity":50,"Player / ESP/Others/Guard ESP":true,"Farm / Sell/Favorite/Always favorite":[],"Event / Halloween/Halloween Dimension/Steal speed":100,"Farm / Sell/Eggs/Auto sell eggs":false,"System / Webhook/What to post/Post stolen eggs":false,"Player / ESP/Others/ESP size":60,"Steal / Auto Steal/Filter/Steal first":"Best value","Farm / Sell/Pets/Only below /s":0,"Player / Move/Protection/Anti ragdoll":true,"Player / ESP/Field eggs/Rarities":["Divine","Eternal","Secret","Cosmic","Mythic"],"Player / Move/Protection/Invisible":false,"Steal / Auto Steal/Auto hop server/Hop when":"After stealing a match","Event / AA/Cursed Island Wars/Auto play Cursed Island Wars":true,"Event / Butterfly/Butterfly bloom/Catch":["Radiant","Amethyst","Sapphire","Emerald"],"Farm / Treadmill/Treadmill/Auto treadmill":false,"System / Interface/Game HUD/Steal panel button on game HUD":true,"System / Server/Server/Hop to":"Least players","Farm / Mutate/Mutate filter/Rarities":["Divine","Eternal","Secret","Cosmic","Mythic","Legendary","Epic","Rare","Uncommon","Common"],"Player / Move/Protection/Instant prompts":true,"System / Server/Join and stay/Rejoin on kick":true,"Farm / Sell/Favorite/Favorite equipped":false,"Event / Halloween/Phantom Express/Auto Phantom Express":true,"System / Optimizer/Frame rate/FPS cap":360,"Steal / Auto Steal/Auto steal/Steal missing index eggs":false,"Steal / Auto Steal/Filter/Only these eggs":["ArchAngel","Kitsune","Nightflame","Royal Skywhale","Unicorn","World Burner","Celestial Sunlion","Gorilla King","Pegasus","Skeleton Horse","Strawberry Elephant","67","Amethyst Runebear","Starry Fox"],"Farm / Sell/Favorite/Min value /s":0,"System / Server/Join and stay/Auto load script":true,"Farm / Mutate/Mutate filter/Skip eggs with":[],"System / Optimizer/Graphics/Low graphics":true,"Event / Halloween/Monsters/Walk speed":1000,"Event / AA/Minigame eggs/Auto steal minigame egg":true,"Farm / Pen/Auto place/Only these eggs":[],"Player / Combat/Auto hit/Hit who":"Nearest player","Farm / Sell/Eggs/Never sell":[],"Farm / Pen/Keep eggs/Eggs to keep":[],"Farm / Fuse/Fuse filter/Only below /s":0,"Event / Halloween/Monsters/Use weapons":["Enchanted Hammer","Racing Bat","Cricket's Banjo","Flyswatter"],"Farm / Fuse/Fuse machine/Skip mutated":true,"Farm / Sell/Pets/Never sell":[],"Farm / Sell/Favorite/Match":"All picked rules","Event / Halloween/Ghost Dog and fishing/Cast luck":"x1.5 Perfect","System / Optimizer/Graphics/Background color":"Black","Player / Move/Movement/God mode":true,"Farm / Pen/Auto place/Mutations":[],"Steal / Auto Steal/Auto steal/Anti guard":true,"Farm / Sell/Favorite/Unfavorite pets not matching":false,"System / Webhook/What to post/Min value /s":0,"Farm / Pen/Auto hatch/Auto hatch":false,"Farm / Sell/Pets/Only mutations":[],"Farm / Fuse/Fuse machine/Eject odd pets":true,"Event / Butterfly/Butterfly machine/Auto trade up":false,"Event / AA/Admin abuse/Instant steal":false,"System / Webhook/What to post/Post when bag is full":false,"Farm / Fuse/Fuse machine/Auto fuse":false,"Farm / Pen/Auto hatch/Only these eggs":[],"Event / Butterfly/Butterfly machine/Smart trade for essence":true,"Event / Halloween/Halloween Dimension/Auto steal Halloween eggs":true,"System / Interface/Quick bars/Bar size":85,"Player / Combat/Weapons/Use weapons":[],"Player / ESP/Others/Player ESP":true,"System / Webhook/Discord webhook/Ping everyone":false,"Farm / Fuse/Fuse machine/Use pets":"Lowest value first","Event / Halloween/Monsters/Auto farm monsters":true,"Farm / Mutate/Auto mutate/Mutate first":"Best value","Player / ESP/Field eggs/Min value /s":0,"Event / AA/Cursed Island Wars/Island Wars target":"Enemies and base","Player / Move/Movement/Infinite jump":true,"Farm / Pen/Auto place/Rarities":["Divine","Eternal","Secret","Cosmic","Mythic","Legendary","Epic","Rare","Uncommon","Common"],"Player / ESP/Field eggs/Mutations":[],"Event / Halloween/Phantom Express/Auto vacuum Ghouler boss":true,"Farm / Treadmill/Progress/Auto upgrade base":false,"Steal / Auto Steal/Auto steal/Auto steal":true,"Player / Combat/Auto hit/Chase speed":1000,"Player / ESP/Field eggs/Fixed size":false,"Event / Halloween/Halloween Dimension/Instant steal Halloween eggs":true,"Event / Halloween/Phantom Express/Walk speed":1000,"Event / Halloween/Phantom Express/Ghost target":"Rarest first","Farm / Sell/Eggs/Only below /s":0,"Farm / Sell/Favorite/Rarities":[],"Steal / Auto Steal/Auto hop server/First hop after":5,"Steal / Auto Steal/Auto steal/Tween speed":110,"Farm / Sell/Pets/Auto sell pets":false,"Event / Halloween/Phantom Express/Auto trade souls":true,"Farm / Sell/Pets/Keep mutated":true,"Steal / Auto Steal/Filter/Sell cheapest egg when bag is full":false,"Player / ESP/Field eggs/Show":[],"Steal / Auto Steal/Auto steal/Go to egg":"Teleport to egg","Player / Combat/Weapons/Hold each":0.2,"Event / AA/Capture the egg/Hold height":120,"Steal / Auto Steal/Filter/Mutations":[],"Event / AA/Capture the egg/Keep away":150,"Farm / Mutate/Mutate filter/Min value /s":0,"Steal / Auto Steal/Auto steal/Teleport zones":["Enchanted Forest","Light Dark","Titan Temple","Cherry Blossom"],"Farm / Pen/Auto hatch/Min value /s":0,"Player / Move/Movement/Speed boost":false,"System / Interface/Interface/UI scale":90,"Farm / Fuse/Fuse filter/Only these pets":[],"Steal / Egg Predictor/Egg showcase/Preview card":false,"Event / Butterfly/Butterfly bloom/Catch speed":600,"Player / Move/Protection/Anti AFK":true,"Event / Halloween/Halloween Dimension/Halloween rarities":[],"System / Interface/Interface/Show / hide UI":{"k":"LeftControl"},"Steal / Auto Steal/Auto steal/Steal from other players":true,"Farm / Pen/Auto place/Min value /s":0,"Event / Butterfly/Butterfly bloom/Catch priority":"Rarest","System / Webhook/Discord webhook/Ping user ID":"","Farm / Sell/Eggs/Only mutations":[],"Farm / Treadmill/Progress/Auto claim offline cash":false,"Farm / Sell/Favorite/Mutations":[],"Event / AA/Capture the egg/Take it from the holder":true,"System / Webhook/Discord webhook/Webhook URL":"","Farm / Priority/Task order/Task order":["Steal filter eggs","Shooting Star","Phantom Express","Pumpkin Moon","Butterfly","Steal wisp eggs","Wisp","Steal missing index","Place","Mutate","Butterfly machine","Ghost Dog quest","Halloween monsters","Halloween fishing","Treadmill"],"Farm / Sell/Eggs/Keep mutated":true,"Event / Butterfly/Wisp companion/Auto wisp quest":false,"System / Optimizer/Graphics/Hide game UI":false}}]=]
 
@@ -59,11 +59,11 @@ local IGNORED_GUIS = {
     Freecam=true, BackpackGui=true, PlayerList=true, PurchasePrompt=true, DogMeoV5_NoticeGui=true
 }
 
--- KIỂM TRA MENU VENYX ĐÃ HIỆN TRÊN MÀN HÌNH HAY CHƯA
-local function isVenyxUiPresent()
+-- KIỂM TRA MENU DOGMEOHUB ĐÃ HIỆN TRÊN MÀN HÌNH HAY CHƯA
+local function isDogMeoHubUiPresent()
     for _, root in ipairs(getScanRoots()) do
         for _, d in ipairs(root:GetDescendants()) do
-            if (d:IsA("TextLabel") or d:IsA("TextButton")) and (d.Text == "VENYX" or d.Text == NEW_TITLE) then
+            if (d:IsA("TextLabel") or d:IsA("TextButton")) and (d.Text == "VENYX" or d.Text == "DogMeoHub" or d.Text == NEW_TITLE) then
                 return true
             end
         end
@@ -71,27 +71,27 @@ local function isVenyxUiPresent()
     return false
 end
 
--- KHỞI CHẠY VENYXHUB SẠCH TRƯỚC KHI HOOK (TRÁNH ANTI-HOOK LUARMOR TRÊN ARCEUS X NEO)
-local function launchVenyxBase()
-    if isVenyxUiPresent() then return end
-    if env.__VenyxLaunchingNow and (os.clock() - (env.__VenyxLaunchClock or 0) < 8) then return end
-    env.__VenyxLaunchingNow = true
-    env.__VenyxLaunchClock = os.clock()
+-- KHỞI CHẠY DOGMEOHUB BASE SẠCH TRƯỚC KHI HOOK
+local function launchDogMeoHubBase()
+    if isDogMeoHubUiPresent() then return end
+    if env.__DogMeoHubLaunchingNow and (os.clock() - (env.__DogMeoHubLaunchClock or 0) < 8) then return end
+    env.__DogMeoHubLaunchingNow = true
+    env.__DogMeoHubLaunchClock = os.clock()
     task.spawn(function()
         if not game:IsLoaded() then game.Loaded:Wait() end
-        local rawCode = safeHttpGet(VENYX_URL)
+        local rawCode = safeHttpGet(DOGMEOHUB_URL)
         if rawCode then
             local fn = loadstring(rawCode)
             if type(fn) == "function" then
                 pcall(fn)
             end
         end
-        env.__VenyxLaunchingNow = false
+        env.__DogMeoHubLaunchingNow = false
     end)
 end
-launchVenyxBase()
+launchDogMeoHubBase()
 
--- HOOK TELEPORT AN TOÀN BẰNG NEWCCLOSURE (KHÔNG CHẠM GETFENV(0) GÂY CRASH ARCEUS X NEO)
+-- HOOK TELEPORT AN TOÀN BẰNG NEWCCLOSURE
 local function setupSafeTeleportHook()
     if env.__DogMeoSafeTpInstalled then return end
     env.__DogMeoSafeTpInstalled = true
@@ -127,7 +127,7 @@ local RAINBOW = ColorSequence.new({
     ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 55, 55))
 })
 
--- 2. VÒNG LẶP HỢP NHẤT (XOAY CẦU VỒNG + FPS ẢO 85-120 TRONG 1 THREAD DUY NHẤT)
+-- 2. VÒNG LẶP HỢP NHẤT (XOAY CẦU VỒNG + FPS ẢO 85-120)
 local fakeFps, lastFpsT = math.random(96, 112), 0
 local function getFakeFps()
     local now = os.clock()
@@ -178,7 +178,7 @@ end)
 -- 3. BỘ DỊCH THUẬT 5 TẦNG O(1)
 local FastCache = {}
 local function hasVi(s)
-    return type(s) == "string" and s ~= "" and s:find("[\194-\244][\128-\191]") ~= nil and not s:find("^[%w%s%p·•●🌶️🇻🇳🌐⚡⏳✅⚠️🚀✨▲▼]+$")
+    return type(s) == "string" and s ~= "" and s:find("[\194-\244][\128-\191]") ~= nil and not s:find("^[%w%s%p·•●🌶️🇳🌐⚡✅⚠️🚀✨▲▼]+$")
 end
 
 local EXACT_VI = {
@@ -236,7 +236,7 @@ local EXACT_VI = {
     ["Farm"]="Cày Cuốc", ["Pen"]="Chuồng Ấp", ["PEN"]="CHUỒNG ẤP", ["Treadmill"]="Máy Tập", ["TREADMILL"]="MÁY TẬP CHẠY", ["Mutate"]="Đột Biến",
     ["Sell"]="Bán", ["SELL"]="BÁN TỰ ĐỘNG", ["Fuse"]="Dung Hợp", ["FUSE"]="DUNG HỢP", ["Priority"]="Ưu Tiên", ["PRIORITY"]="THỨ TỰ ƯU TIÊN",
     ["AUTO PLACE"]="TỰ ĐỘNG ĐẶT TRỨNG", ["Auto place"]="Tự động đặt trứng", ["Place when"]="Đặt khi", ["Always"]="Luôn luôn", ["Place first"]="Ưu tiên đặt",
-    ["AUTO HATCH"]="TỰ ĐỘNG ẤP TRỨNG", ["Auto hatch"]="Tự động ấp trứng", ["Equip best pets"]="Trang bị pet mạnh nhất", ["READY NOW"]="SẴN SÀNG ẤP",
+    ["AUTO HATCH"]="TỰ ĐỘNG ẤP TRỨNG", ["Auto hatch"]="Tự động ấp trứng", ["Equip best pets"]="Trang bị pet mạnh nhất", ["READY NOW"]="SN SÀNG ẤP",
     ["Auto treadmill"]="Tự chạy máy tập", ["Auto upgrade treadmill"]="Tự nâng cấp máy tập", ["PROGRESS"]="TIẾN TRÌNH", ["Auto upgrade base"]="Tự nâng cấp căn cứ",
     ["Auto buy trails"]="Tự mua vệt sáng", ["Auto claim offline cash"]="Tự nhận tiền ngoại tuyến", ["Auto claim index rewards"]="Tự nhận thưởng Chỉ mục",
     ["AUTO MUTATE"]="TỰ ĐỘNG ĐỘT BIẾN", ["Auto mutate"]="Tự động đột biến", ["MUTATE FILTER"]="BỘ LỌC ĐỘT BIẾN", ["Use items"]="Dùng vật phẩm",
@@ -417,9 +417,9 @@ local DYN_VI = {
     { pat="^(.+) was added to your configs%. Apply it now%??$", rep="Đã thêm '%1' vào danh sách cấu hình. Áp dụng ngay?" },
     { pat="^(.+) was added to your configs$", rep="Đã thêm '%1' vào danh sách cấu hình" },
     { pat="Welcome to Venyx ([%d%.]+)! Join our Discord for updates and support", rep="Chào mừng tới DogMeoHub V5 (%1)! Tham gia Discord để cập nhật và nhận hỗ trợ" },
-    { pat="Venyx(.-)(%d+) hours? ago", rep="DogMeoHub%1%2 giờ trước" },
-    { pat="Venyx(.-)(%d+) minutes? ago", rep="DogMeoHub%1%2 phút trước" },
-    { pat="Venyx(.-)(%d+) days? ago", rep="DogMeoHub%1%2 ngày trước" },
+    { pat="DogMeoHub(.-)(%d+) hours? ago", rep="DogMeoHub%1%2 giờ trước" },
+    { pat="DogMeoHub(.-)(%d+) minutes? ago", rep="DogMeoHub%1%2 phút trước" },
+    { pat="DogMeoHub(.-)(%d+) days? ago", rep="DogMeoHub%1%2 ngày trước" },
     { pat="^ALL (%d+)$", rep="TẤT CẢ %1" }, { pat="^READY (%d+)$", rep="SẴN SÀNG %1" },
     { pat="^GROWING (%d+)$", rep="ĐANG LỚN %1" }, { pat="^IN BAG (%d+)$", rep="TRONG TÚI %1" },
     { pat="Pen (%d+/%d+) · (%d+) egg%(s%) ready to place", rep="Chuồng %1 · %2 trứng sẵn sàng đặt" },
@@ -481,7 +481,7 @@ local function translateText(raw)
     if not raw or raw == "" then return raw end
     local ck = State.Language .. "|" .. raw
     if FastCache[ck] then return FastCache[ck] end
-    if raw:find("Venyx SAE", 1, true) then raw = raw:gsub("Venyx SAE", "DogMeo SAE") elseif raw == "VENYX" then raw = NEW_TITLE end
+    if raw:find("Venyx SAE", 1, true) then raw = raw:gsub("Venyx SAE", "DogMeoHub SAE") elseif raw == "VENYX" or raw == "DogMeoHub" then raw = NEW_TITLE end
     if State.Language == "EN" then FastCache[ck] = raw; return raw end
     local norm = (raw:match("^%s*(.-)%s*$") or raw):gsub("%s+", " ")
     if norm:match("^[%$%+%-%d%.%,%/%%sxhm]+$") or (norm:match("^v%d+%.%d+") and #norm < 10) then FastCache[ck] = raw; return raw end
@@ -589,7 +589,7 @@ local function showNotice()
     local function syncNotice()
         if State.Language == "VI" then
             tLbl.Text = "🚀 CẬP NHẬT TÍNH NĂNG MỚI"
-            bLbl.Text = "✨ Tính năng Auto Config: Tự động nhập cấu hình Auto Farm chuẩn, tối ưu 100% cho mọi tài khoản (mới chơi/ít tốc độ) và thiết bị (kể cả máy yếu/lag). Cấu hình đã được test kỹ càng để mang lại hiệu quả cao nhất!\n✨ TUY NHIÊN SETTING KHÔNG THỂ ĐÚNG HOÀN TOÀN YÊU CẦU CỦA MỖI TÀI KHOẢN THIẾT BỊ. BẠN CÓ THỂ CHỈNH LẠI NHỮNG THỨ CHƯA ĐÚNG YÊU CẦU CỦA BẠN."
+            bLbl.Text = "✨ Tính năng Auto Config: Tự động nhập cấu hình Auto Farm chuẩn, tối ưu 100% cho mọi tài khoản (mới chơi/ít tốc độ) và thiết bị (kể cả máy yếu/lag). Cấu hình đã được test kỹ càng để mang lại hiệu quả cao nhất!\n✨ TUY NHIÊN SETTING KHÔNG THỂ ĐÚNG HOÀN TOÀN YÊU CẦU CỦA MI TÀI KHOẢN THIẾT BỊ. BẠN CÓ THỂ CHỈNH LẠI NHỮNG THỨ CHƯA ĐÚNG YÊU CẦU CỦA BẠN."
             cBtn.Text = "ĐÓNG"
         else
             tLbl.Text = "🚀 UPCOMING UPDATE"
@@ -616,7 +616,7 @@ local function refreshAll()
     end)
 end
 
--- 5. NẠP CONFIG (CHỈ DÁN JSON VÀ BẤM IMPORT, KHÔNG TỰ ĐỘNG BẤM APPLY NOW)
+-- 5. NẠP CONFIG
 local function fireBtn(btn)
     if not btn then return false end
     local fired = false
@@ -641,12 +641,12 @@ local function fireBtn(btn)
     return fired
 end
 
-local function runAutoFarmMacro(venyxGui, btnLbl)
+local function runAutoFarmMacro(dogMeoHubGui, btnLbl)
     task.spawn(function()
         if btnLbl then btnLbl.Text = "⏳ ĐANG NẠP CONFIG..." end
         local function findImportControls()
             local box, btn
-            for _, d in ipairs(venyxGui:GetDescendants()) do
+            for _, d in ipairs(dogMeoHubGui:GetDescendants()) do
                 if d:IsA("TextBox") then
                     local ph = (d:GetAttribute("OrigPlaceholder") or d.PlaceholderText or ""):lower()
                     if ph:find("paste config", 1, true) or ph:find("dán mã", 1, true) then box = d end
@@ -659,7 +659,7 @@ local function runAutoFarmMacro(venyxGui, btnLbl)
         end
         local importBox, importBtn = findImportControls()
         if not importBox or not importBtn then
-            for _, d in ipairs(venyxGui:GetDescendants()) do
+            for _, d in ipairs(dogMeoHubGui:GetDescendants()) do
                 if d:IsA("TextButton") or d:IsA("TextLabel") then
                     local ot = (d:GetAttribute("OrigRawText") or d.Text or ""):match("^%s*(.-)%s*$")
                     if ot == "Config" or d.Text == "Cấu Hình" then fireBtn(d); break end
@@ -669,7 +669,7 @@ local function runAutoFarmMacro(venyxGui, btnLbl)
             importBox, importBtn = findImportControls()
         end
         if not importBox then
-            if btnLbl then btnLbl.Text = "⚠️ MỞ MỤC CẤU HÌNH TRƯỚC!"; task.wait(2); btnLbl.Text = "⚡ CONFIG SETTING AUTO FARM" end
+            if btnLbl then btnLbl.Text = "⚠️ MỞ MỤC CẤU HÌNH TRƯỚC!"; task.wait(2); btnLbl.Text = " CONFIG SETTING AUTO FARM" end
             return
         end
         importBox:SetAttribute("__IsTranslating", true)
@@ -690,7 +690,7 @@ local function runAutoFarmMacro(venyxGui, btnLbl)
 end
 
 -- 6. DYNAMIC ISLAND
-local function setupIsland(statusLbl, venyxGui)
+local function setupIsland(statusLbl, dogMeoHubGui)
     local pill = statusLbl.Parent
     if not (pill and pill:IsA("GuiObject")) then return end
     statusLbl:SetAttribute("__IslandDone", true)
@@ -723,12 +723,12 @@ local function setupIsland(statusLbl, venyxGui)
     end
     State.RefreshIslandCallback = function() syncStatus(true) end
     syncStatus(false)
-    local exp = venyxGui:FindFirstChild("DogMeoV5_ExpandedIsland")
+    local exp = dogMeoHubGui:FindFirstChild("DogMeoV5_ExpandedIsland")
     if statusLbl:GetAttribute("__IslandSession") == SID and exp then return end
     statusLbl:SetAttribute("__IslandSession", SID)
     local tg = statusLbl:FindFirstChild("TextRainbow") or mk("UIGradient", { Name="TextRainbow", Color=RAINBOW }, statusLbl)
     table.insert(State.ActiveGradients, tg)
-    pill.Parent, pill.AnchorPoint, pill.ZIndex, pill.Active, statusLbl.Active, hint.Active = venyxGui, Vector2.new(0.5,0), 9999, true, true, true
+    pill.Parent, pill.AnchorPoint, pill.ZIndex, pill.Active, statusLbl.Active, hint.Active = dogMeoHubGui, Vector2.new(0.5,0), 9999, true, true, true
     if pill.Position.Y.Offset < 4 or pill.Position.Y.Offset > 600 then pill.Position = UDim2.new(0.5,0,0,10) end
     if not pill:FindFirstChildOfClass("UICorner") then mk("UICorner", { CornerRadius=UDim.new(1,0) }, pill) end
     local ps = pill:FindFirstChild("IslandStroke") or mk("UIStroke", { Name="IslandStroke", Thickness=1.6, ApplyStrokeMode=Enum.ApplyStrokeMode.Border, Color=Color3.new(1,1,1) }, pill)
@@ -737,7 +737,7 @@ local function setupIsland(statusLbl, venyxGui)
     exp = mk("Frame", {
         Name="DogMeoV5_ExpandedIsland", AnchorPoint=Vector2.new(0.5,0), Position=pill.Position, Size=UDim2.new(0,268,0,118),
         BackgroundColor3=BLACK_BG, BorderSizePixel=0, Visible=false, Active=true, ZIndex=10000
-    }, venyxGui)
+    }, dogMeoHubGui)
     mk("UICorner", { CornerRadius=UDim.new(0,16) }, exp)
     local es = mk("UIStroke", { Thickness=1.6, Color=Color3.new(1,1,1), ApplyStrokeMode=Enum.ApplyStrokeMode.Border }, exp)
     table.insert(State.ActiveGradients, mk("UIGradient", { Color=RAINBOW }, es))
@@ -748,13 +748,13 @@ local function setupIsland(statusLbl, venyxGui)
     mk("UICorner", { CornerRadius=UDim.new(1,0) }, cap)
     local sld = mk("Frame", { Size=UDim2.new(0.5,-4,1,-4), Position=(State.Language=="VI" and UDim2.new(0,2,0,2) or UDim2.new(0.5,2,0,2)), BackgroundColor3=Color3.fromRGB(95,110,235), BorderSizePixel=0, ZIndex=10002 }, cap)
     mk("UICorner", { CornerRadius=UDim.new(1,0) }, sld)
-    local bVI = mk("TextButton", { Size=UDim2.new(0.5,0,1,0), BackgroundTransparency=1, Text="🇻🇳 TIẾNG VIỆT", Font=Enum.Font.GothamBold, TextSize=10.5, TextColor3=(State.Language=="VI" and Color3.new(1,1,1) or Color3.fromRGB(150,165,190)), ZIndex=10003 }, cap)
-    local bEN = mk("TextButton", { Size=UDim2.new(0.5,0,1,0), Position=UDim2.new(0.5,0,0,0), BackgroundTransparency=1, Text="🌐 ENGLISH", Font=Enum.Font.GothamBold, TextSize=10.5, TextColor3=(State.Language=="EN" and Color3.new(1,1,1) or Color3.fromRGB(150,165,190)), ZIndex=10003 }, cap)
+    local bVI = mk("TextButton", { Size=UDim2.new(0.5,0,1,0), BackgroundTransparency=1, Text="🇳 TIẾNG VIỆT", Font=Enum.Font.GothamBold, TextSize=10.5, TextColor3=(State.Language=="VI" and Color3.new(1,1,1) or Color3.fromRGB(150,165,190)), ZIndex=10003 }, cap)
+    local bEN = mk("TextButton", { Size=UDim2.new(0.5,0,1,0), Position=UDim2.new(0.5,0,0,0), BackgroundTransparency=1, Text=" ENGLISH", Font=Enum.Font.GothamBold, TextSize=10.5, TextColor3=(State.Language=="EN" and Color3.new(1,1,1) or Color3.fromRGB(150,165,190)), ZIndex=10003 }, cap)
     local cfgBtn = mk("TextButton", { Name="AutoFarmConfigBtn", Size=UDim2.new(1,-20,0,34), Position=UDim2.new(0,10,0,74), BackgroundColor3=Color3.fromRGB(24,28,44), BorderSizePixel=0, Text="⚡ CONFIG SETTING AUTO FARM", Font=Enum.Font.GothamBold, TextSize=10.5, TextColor3=Color3.new(1,1,1), ZIndex=10003 }, exp)
     mk("UICorner", { CornerRadius=UDim.new(1,0) }, cfgBtn)
     local cs = mk("UIStroke", { Thickness=1.3, Color=Color3.new(1,1,1), ApplyStrokeMode=Enum.ApplyStrokeMode.Border }, cfgBtn)
     table.insert(State.ActiveGradients, mk("UIGradient", { Color=RAINBOW }, cs))
-    cfgBtn.MouseButton1Click:Connect(function() runAutoFarmMacro(venyxGui, cfgBtn) end)
+    cfgBtn.MouseButton1Click:Connect(function() runAutoFarmMacro(dogMeoHubGui, cfgBtn) end)
     local function setLang(l)
         if State.Language == l then return end
         State.Language = l
@@ -860,9 +860,9 @@ local function patchHeaderLogo(win, titleLbl)
     end
 end
 
--- 8. BỘ QUÉT SỰ KIỆN ZERO-LAG (QUÉT SÂU GETHUI CHO ARCEUS X NEO & FORCE ENABLED)
-local venyxGuiLocked = nil
-local function patchVenyxGui(gui, titleLbl)
+-- 8. BỘ QUÉT SỰ KIỆN ZERO-LAG
+local dogMeoHubGuiLocked = nil
+local function patchDogMeoHubGui(gui, titleLbl)
     pcall(function() gui.Enabled = true end)
     setupSafeTeleportHook()
     if titleLbl.Text ~= NEW_TITLE then
@@ -921,7 +921,7 @@ local function bindGuiEvents(gui)
                 if not isAlive() then return end
                 if not nd:IsA("TextBox") and isFpsTxt(nd.Text) then hookFps(nd) else hookTrans(nd) end
             end)
-        elseif (nd:IsA("ImageLabel") or nd:IsA("ImageButton")) and gui == venyxGuiLocked then
+        elseif (nd:IsA("ImageLabel") or nd:IsA("ImageButton")) and gui == dogMeoHubGuiLocked then
             task.defer(function()
                 if isAlive() and not nd:FindFirstAncestorOfClass("ScrollingFrame") then setupCircleLogo(nd) end
             end)
@@ -932,7 +932,6 @@ end
 local function scanOnce()
     if not isAlive() then return false end
     for _, root in ipairs(getScanRoots()) do
-        -- Quét cả con trực tiếp lẫn ScreenGui nằm trong Folder con của gethui() trên Arceus X NEO
         local guis = {}
         for _, ch in ipairs(root:GetChildren()) do
             if ch:IsA("ScreenGui") then table.insert(guis, ch)
@@ -948,17 +947,17 @@ local function scanOnce()
                     if d:IsA("TextLabel") or d:IsA("TextButton") then
                         local t = d.Text
                         if isFpsTxt(t) then hookFps(d)
-                        elseif (t == "VENYX" or t == NEW_TITLE) and not d:FindFirstAncestorOfClass("ScrollingFrame") then titleLbl = d end
+                        elseif (t == "VENYX" or t == "DogMeoHub" or t == NEW_TITLE) and not d:FindFirstAncestorOfClass("ScrollingFrame") then titleLbl = d end
                     end
                 end
                 if titleLbl then
-                    venyxGuiLocked = gui
-                    patchVenyxGui(gui, titleLbl)
+                    dogMeoHubGuiLocked = gui
+                    patchDogMeoHubGui(gui, titleLbl)
                 end
             end
         end
     end
-    return venyxGuiLocked ~= nil
+    return dogMeoHubGuiLocked ~= nil
 end
 
 for _, root in ipairs(getScanRoots()) do
@@ -972,11 +971,10 @@ end
 pcall(scanOnce)
 task.spawn(function()
     local t = 0
-    while isAlive() and not venyxGuiLocked and t < 60 do
+    while isAlive() and not dogMeoHubGuiLocked and t < 60 do
         task.wait(0.35); t = t + 0.35
-        -- Nếu sau 4.5s trên Arceus X NEO vẫn chưa thấy UI Venyx thì tự động gọi nạp lại VenyxHub
-        if t > 4.5 and not venyxGuiLocked then
-            launchVenyxBase()
+        if t > 4.5 and not dogMeoHubGuiLocked then
+            launchDogMeoHubBase()
         end
         pcall(scanOnce)
     end

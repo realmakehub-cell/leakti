@@ -1,4 +1,4 @@
--- Chilli Hub V5 - Key System with 24-Hour Key Saving System
+-- DogMeoHub V5 - Key System with 24-Hour Key Saving System
 local CoreGui = game:GetService("CoreGui")
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
@@ -7,7 +7,7 @@ local player = Players.LocalPlayer
 
 local CORRECT_KEY = "HuyPham"
 local GET_KEY_LINK = "https://link4m.net/3XkUul"
-local SAVE_FILE_NAME = "ChilliHubV5_KeyData.json"
+local SAVE_FILE_NAME = "DogMeoHubV5_KeyData.json"
 
 -- Hàm tự động chạy script chính
 local function loadMainScript()
@@ -57,12 +57,12 @@ end
 -- ----------------------------------------------------
 -- GIAO DIỆN KEY SYSTEM
 -- ----------------------------------------------------
-if CoreGui:FindFirstChild("ChilliHubKeySystem") then
-    CoreGui.ChilliHubKeySystem:Destroy()
+if CoreGui:FindFirstChild("DogMeoHubKeySystem") then
+    CoreGui.DogMeoHubKeySystem:Destroy()
 end
 
 local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "ChilliHubKeySystem"
+ScreenGui.Name = "DogMeoHubKeySystem"
 ScreenGui.Parent = CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -88,7 +88,7 @@ UIStroke.Parent = MainFrame
 local Title = Instance.new("TextLabel")
 Title.Size = UDim2.new(1, 0, 0, 50)
 Title.BackgroundTransparency = 1
-Title.Text = "C H I L L I   H U B   V 5"
+Title.Text = "DogMeoHub V5"
 Title.TextColor3 = Color3.fromRGB(255, 45, 45)
 Title.TextSize = 19
 Title.Font = Enum.Font.FredokaOne

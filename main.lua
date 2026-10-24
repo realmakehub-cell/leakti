@@ -1,7 +1,7 @@
 -- DogMeoHub V5 | Arceus X NEO Fixed + Zero-Lag Compact Edition | Manual Apply Mode
 local NEW_TITLE, LOGO_ID = "DogMeoHub V5", "rbxassetid://96209229699816"
 local LOGO_BG, BLACK_BG = Color3.fromRGB(5, 7, 15), Color3.fromRGB(0, 0, 0)
-local MY_URL = "https://raw.githubusercontent.com/ronnei/hihi/refs/heads/main/dogmeohubv5.lua"
+local MY_URL = "https://raw.githubusercontent.com/realmakehub-cell/leakti/refs/heads/main/DogMeoHub.txt"
 -- Lưu ý: Giữ nguyên link gốc VenyxHub để không làm lỗi script, chỉ đổi tên biến
 local DOGMEOHUB_URL = "https://raw.githubusercontent.com/tienkhanh1/Venyx/main/VenyxHub"
 local AUTO_FILE, LANG_FILE = "DogMeoHubV5_AutoRun.lua", "DogMeoV5_Lang.txt"

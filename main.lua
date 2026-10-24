@@ -1,5 +1,5 @@
 -- DogMeoHub V5 | Arceus X NEO Fixed + Zero-Lag Compact Edition | Manual Apply Mode
-local NEW_TITLE, LOGO_ID = "DogMeoHub V5", "rbxassetid://124302474201298"
+local NEW_TITLE, LOGO_ID = "DogMeoHub V5", "rbxassetid://96209229699816"
 local LOGO_BG, BLACK_BG = Color3.fromRGB(5, 7, 15), Color3.fromRGB(0, 0, 0)
 -- Lưu ý: Bạn có thể cần đổi tên file trên GitHub của bạn thành dogmeohubv5.lua nếu chưa đổi
 local MY_URL = "https://raw.githubusercontent.com/ronnei/hihi/refs/heads/main/dogmeohubv5.lua"

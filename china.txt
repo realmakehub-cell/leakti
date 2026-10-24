@@ -1,0 +1,259 @@
+-- Chilli Hub V5 - Key System with 24-Hour Key Saving System
+local CoreGui = game:GetService("CoreGui")
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local HttpService = game:GetService("HttpService")
+local player = Players.LocalPlayer
+
+local CORRECT_KEY = "ChilliHubV5KeybKaowiwMapwoiwjelLwpwojejeieb"
+local GET_KEY_LINK = "https://link4m.net/3XkUul"
+local SAVE_FILE_NAME = "ChilliHubV5_KeyData.json"
+
+-- Hàm tự động chạy script chính
+local function loadMainScript()
+	local success, err = pcall(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ronnei/hihi/refs/heads/main/chillihubv5.lua"))()
+	end)
+	if not success then
+		warn("Failed to load script: " .. tostring(err))
+	end
+end
+
+-- ----------------------------------------------------
+-- KIỂM TRA LƯU KEY (24 GIỜ)
+-- ----------------------------------------------------
+local function checkSavedKey()
+	if readfile and isfile and isfile(SAVE_FILE_NAME) then
+		local success, data = pcall(function()
+			return HttpService:JSONDecode(readfile(SAVE_FILE_NAME))
+		end)
+		if success and type(data) == "table" then
+			if data.Key == CORRECT_KEY and data.ExpireTime and os.time() < data.ExpireTime then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+local function saveKeyData()
+	if writefile then
+		local data = {
+			Key = CORRECT_KEY,
+			ExpireTime = os.time() + (24 * 3600) -- Hết hạn sau 24 giờ (86400 giây)
+		}
+		pcall(function()
+			writefile(SAVE_FILE_NAME, HttpService:JSONEncode(data))
+		end)
+	end
+end
+
+-- Nếu đã lưu key và chưa hết hạn 24 giờ -> Chạy thẳng script chính, không hiện Menu
+if checkSavedKey() then
+	loadMainScript()
+	return
+end
+
+-- ----------------------------------------------------
+-- GIAO DIỆN KEY SYSTEM
+-- ----------------------------------------------------
+if CoreGui:FindFirstChild("ChilliHubKeySystem") then
+    CoreGui.ChilliHubKeySystem:Destroy()
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ChilliHubKeySystem"
+ScreenGui.Parent = CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+-- Main Frame
+local MainFrame = Instance.new("Frame")
+MainFrame.Size = UDim2.new(0, 360, 0, 240)
+MainFrame.Position = UDim2.new(0.5, -180, 0.5, -120)
+MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+MainFrame.BorderSizePixel = 0
+MainFrame.Parent = ScreenGui
+
+local MainCorner = Instance.new("UICorner")
+MainCorner.CornerRadius = UDim.new(0, 16)
+MainCorner.Parent = MainFrame
+
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Color = Color3.fromRGB(255, 35, 35)
+UIStroke.Thickness = 2
+UIStroke.Transparency = 0.2
+UIStroke.Parent = MainFrame
+
+-- Title
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(1, 0, 0, 50)
+Title.BackgroundTransparency = 1
+Title.Text = "C H I L L I   H U B   V 5"
+Title.TextColor3 = Color3.fromRGB(255, 45, 45)
+Title.TextSize = 19
+Title.Font = Enum.Font.FredokaOne
+Title.Parent = MainFrame
+
+local Divider = Instance.new("Frame")
+Divider.Size = UDim2.new(0.85, 0, 0, 1)
+Divider.Position = UDim2.new(0.075, 0, 0, 50)
+Divider.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Divider.BorderSizePixel = 0
+Divider.Parent = MainFrame
+
+-- Key TextBox
+local TextBox = Instance.new("TextBox")
+TextBox.Size = UDim2.new(0.85, 0, 0, 42)
+TextBox.Position = UDim2.new(0.075, 0, 0, 68)
+TextBox.PlaceholderText = "Enter key here..."
+TextBox.PlaceholderColor3 = Color3.fromRGB(110, 110, 110)
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+TextBox.TextSize = 13
+TextBox.Font = Enum.Font.GothamMedium
+TextBox.Parent = MainFrame
+
+local BoxCorner = Instance.new("UICorner")
+BoxCorner.CornerRadius = UDim.new(0, 10)
+BoxCorner.Parent = TextBox
+
+local BoxStroke = Instance.new("UIStroke")
+BoxStroke.Color = Color3.fromRGB(45, 45, 45)
+BoxStroke.Thickness = 1
+BoxStroke.Parent = TextBox
+
+-- IN-MENU ALERT BADGE
+local AlertFrame = Instance.new("Frame")
+AlertFrame.Size = UDim2.new(0.85, 0, 0, 30)
+AlertFrame.Position = UDim2.new(0.075, 0, 0, 120)
+AlertFrame.BackgroundColor3 = Color3.fromRGB(30, 18, 18)
+AlertFrame.BackgroundTransparency = 1
+AlertFrame.BorderSizePixel = 0
+AlertFrame.Parent = MainFrame
+
+local AlertCorner = Instance.new("UICorner")
+AlertCorner.CornerRadius = UDim.new(0, 8)
+AlertCorner.Parent = AlertFrame
+
+local AlertStroke = Instance.new("UIStroke")
+AlertStroke.Color = Color3.fromRGB(255, 50, 50)
+AlertStroke.Thickness = 1
+AlertStroke.Transparency = 1
+AlertStroke.Parent = AlertFrame
+
+local AlertText = Instance.new("TextLabel")
+AlertText.Size = UDim2.new(1, 0, 1, 0)
+AlertText.BackgroundTransparency = 1
+AlertText.Text = ""
+AlertText.TextColor3 = Color3.fromRGB(255, 80, 80)
+AlertText.TextTransparency = 1
+AlertText.TextSize = 12
+AlertText.Font = Enum.Font.GothamBold
+AlertText.Parent = AlertFrame
+
+-- Submit Button
+local SubmitBtn = Instance.new("TextButton")
+SubmitBtn.Size = UDim2.new(0.41, 0, 0, 38)
+SubmitBtn.Position = UDim2.new(0.075, 0, 0, 162)
+SubmitBtn.BackgroundColor3 = Color3.fromRGB(255, 35, 35)
+SubmitBtn.Text = "SUBMIT"
+SubmitBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+SubmitBtn.TextSize = 13
+SubmitBtn.Font = Enum.Font.GothamBold
+SubmitBtn.Parent = MainFrame
+
+local BtnCorner = Instance.new("UICorner")
+BtnCorner.CornerRadius = UDim.new(0, 10)
+BtnCorner.Parent = SubmitBtn
+
+-- Get Key Button
+local GetKeyBtn = Instance.new("TextButton")
+GetKeyBtn.Size = UDim2.new(0.41, 0, 0, 38)
+GetKeyBtn.Position = UDim2.new(0.515, 0, 0, 162)
+GetKeyBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+GetKeyBtn.Text = "GET KEY"
+GetKeyBtn.TextColor3 = Color3.fromRGB(220, 220, 220)
+GetKeyBtn.TextSize = 13
+GetKeyBtn.Font = Enum.Font.GothamBold
+GetKeyBtn.Parent = MainFrame
+
+local GetKeyCorner = Instance.new("UICorner")
+GetKeyCorner.CornerRadius = UDim.new(0, 10)
+GetKeyCorner.Parent = GetKeyBtn
+
+-- Function to trigger in-menu alert
+local notifThread = nil
+local function setInMenuAlert(msg, isSuccess)
+	AlertText.Text = msg
+	
+	if isSuccess then
+		AlertFrame.BackgroundColor3 = Color3.fromRGB(18, 32, 22)
+		AlertStroke.Color = Color3.fromRGB(50, 255, 120)
+		AlertText.TextColor3 = Color3.fromRGB(80, 255, 140)
+	else
+		AlertFrame.BackgroundColor3 = Color3.fromRGB(32, 18, 18)
+		AlertStroke.Color = Color3.fromRGB(255, 50, 50)
+		AlertText.TextColor3 = Color3.fromRGB(255, 80, 80)
+	end
+
+	TweenService:Create(AlertFrame, TweenInfo.new(0.25), {BackgroundTransparency = 0.2}):Play()
+	TweenService:Create(AlertStroke, TweenInfo.new(0.25), {Transparency = 0.3}):Play()
+	TweenService:Create(AlertText, TweenInfo.new(0.25), {TextTransparency = 0}):Play()
+
+	if notifThread then task.cancel(notifThread) end
+	notifThread = task.delay(2.5, function()
+		TweenService:Create(AlertFrame, TweenInfo.new(0.3), {BackgroundTransparency = 1}):Play()
+		TweenService:Create(AlertStroke, TweenInfo.new(0.3), {Transparency = 1}):Play()
+		TweenService:Create(AlertText, TweenInfo.new(0.3), {TextTransparency = 1}):Play()
+	end)
+end
+
+-- Ultra Smooth Math Sine Elastic Shake
+local function ultraSmoothShake()
+	local basePos = UDim2.new(0.5, -180, 0.5, -120)
+	
+	TweenService:Create(UIStroke, TweenInfo.new(0.12), {Color = Color3.fromRGB(255, 0, 0), Transparency = 0}):Play()
+	
+	task.spawn(function()
+		local startTime = tick()
+		local duration = 0.4
+		while tick() - startTime < duration do
+			local elapsed = tick() - startTime
+			local progress = elapsed / duration
+			local offset = math.sin(elapsed * 50) * 9 * (1 - progress)
+			MainFrame.Position = basePos + UDim2.new(0, offset, 0, 0)
+			task.wait()
+		end
+		MainFrame.Position = basePos
+		TweenService:Create(UIStroke, TweenInfo.new(0.35), {Color = Color3.fromRGB(255, 35, 35), Transparency = 0.2}):Play()
+	end)
+end
+
+-- Get Key Button Event
+GetKeyBtn.MouseButton1Click:Connect(function()
+	setclipboard(GET_KEY_LINK)
+	setInMenuAlert("Link copied to clipboard!", true)
+end)
+
+-- Submit Button Event
+SubmitBtn.MouseButton1Click:Connect(function()
+	if TextBox.Text == CORRECT_KEY then
+		saveKeyData() -- Lưu Key vào file (có hạn 24 giờ)
+		setInMenuAlert("Valid Key! Loading script...", true)
+		
+		local tween = TweenService:Create(MainFrame, TweenInfo.new(0.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+			Size = UDim2.new(0, 0, 0, 0),
+			Position = UDim2.new(0.5, 0, 0.5, 0)
+		})
+		tween:Play()
+		task.wait(0.35)
+		ScreenGui:Destroy()
+		
+		loadMainScript()
+	else
+		TextBox.Text = ""
+		ultraSmoothShake()
+		setInMenuAlert("Invalid Key! Please try again.", false)
+	end
+end)

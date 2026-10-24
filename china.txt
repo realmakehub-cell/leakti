@@ -5,7 +5,7 @@ local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
 local player = Players.LocalPlayer
 
-local CORRECT_KEY = "ChilliHubV5KeybKaowiwMapwoiwjelLwpwojejeieb"
+local CORRECT_KEY = "HuyPham"
 local GET_KEY_LINK = "https://link4m.net/3XkUul"
 local SAVE_FILE_NAME = "ChilliHubV5_KeyData.json"
 
